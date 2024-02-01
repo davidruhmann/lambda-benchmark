@@ -1,0 +1,7 @@
+display_name: "Dotnet8 AOT al2023"
+runtime: "provided.al2023"
+handler: "bootstrap"
+path: "dotnet8al2023"
+architectures:
+  - x86_64
+  - arm64

@@ -1,0 +1,6 @@
+{
+    "configuration": "Release",
+    "framework": "net8.0",
+    "function-runtime": "provided.al2",
+    "function-handler": "bootstrap"
+}
