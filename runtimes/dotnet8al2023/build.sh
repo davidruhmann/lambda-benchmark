@@ -17,7 +17,7 @@ rm ${zip} 2> /dev/null
 
 #docker buildx create --name container --driver=docker-container
 #docker buildx build . --builder=container --platform=${PLATFORM} --build-arg ARCH=${ARCH} --build-arg IMAGE_ARCH=${IMAGE_ARCH} -t mbwilding/dotnet8al2023 --load
-docker buildx build . --platform=${PLATFORM} --build-arg ARCH=${ARCH} --build-arg IMAGE_ARCH=${IMAGE_ARCH} -t mbwilding/dotnet8al2023 --load
-#docker build . --platform=${PLATFORM} --build-arg ARCH=${ARCH} --build-arg IMAGE_ARCH=${IMAGE_ARCH} -t mbwilding/dotnet8al2023
+#docker buildx build . --platform=${PLATFORM} --build-arg ARCH=${ARCH} --build-arg IMAGE_ARCH=${IMAGE_ARCH} -t mbwilding/dotnet8al2023 --load
+docker build . --platform=${PLATFORM} --build-arg ARCH=${ARCH} --build-arg IMAGE_ARCH=${IMAGE_ARCH} -t mbwilding/dotnet8al2023
 dockerId=$(docker create mbwilding/dotnet8al2023)
 docker cp $dockerId:/code.zip ${zip}
