@@ -21,7 +21,7 @@ jobs:
   build:
 
     name: "${{ inputs.runtime }} ${{ inputs.architecture }} build"
-    runs-on: ${{ inputs.architecture == 'arm64' && 'macos-14' || 'ubuntu-latest' }}
+    runs-on: 'ubuntu-latest'
 
     permissions:
       contents: read
@@ -31,11 +31,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup docker (missing on MacOS)
-        if: runner.os == 'macos'
-        run: |
-          brew install docker
-          colima start
+      - name: Setup QEMU (docker)
+        uses: docker/setup-qemu-action@v3
 
       - name: Run script
         run: |

@@ -7,7 +7,7 @@ if [ $1 = "x86_64" ]; then
 elif [ $1 = "arm64" ]; then
     ARCH="arm64"
     IMAGE_ARCH="arm64v8"
-    PLATFORM="linux/arm64"
+    PLATFORM="linux/arm64/v8"
 fi
 
 path=$(sed -n 's/path: "\(.*\)"/\1/p' manifest.yml)
