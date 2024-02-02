@@ -13,6 +13,7 @@
     <InvariantGlobalization>true</InvariantGlobalization>
     <OptimizationPreference>Speed</OptimizationPreference>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <PublishDir>publish</PublishDir>
   </PropertyGroup>
 
   <ItemGroup>
